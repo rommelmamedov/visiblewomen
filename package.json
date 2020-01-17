@@ -6,10 +6,10 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ramilmamedo/#visiblewomen/"
+		"url": "https://github.com/ramilmamedo/#VisibleWomen/"
 	},
 	"bugs": {
-		"url": "https://github.com/ramilmamedo/#visiblewomen/issues"
+		"url": "https://github.com/ramilmamedo/#VisibleWomen/issues"
 	},
 	"scripts": {
 		"start": "yarn && yarn dev",

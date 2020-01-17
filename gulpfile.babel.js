@@ -112,9 +112,9 @@ export const utils = () => {
  **/
 export const favicons = () => {
   const settings = {
-      appName: '#visiblewomen',
-      appShortName: '#visiblewomen',
-      appDescription: 'Starter pack for automating tasks in everyday front-end development. 🤖',
+      appName: '#VisibleWomen',
+      appShortName: '#VisibleWomen',
+      appDescription: 'The Visible Women Hashtag',
       dir: 'ltr',
       lang: 'en-US',
       background: '#fff',
@@ -226,7 +226,7 @@ export const server = done => {
     notify: false,
     //  https: true,
     //  tunnel: true,
-    //  tunnel: '#visiblewomen' //  Demonstration page: http://#visiblewomen.localtunnel.me
+    //  tunnel: '#VisibleWomen' //  Demonstration page: http://#VisibleWomen.localtunnel.me
   });
   done();
 };

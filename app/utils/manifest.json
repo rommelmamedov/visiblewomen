@@ -1,7 +1,7 @@
 {
-  "name": "#visiblewomen",
-  "short_name": "#visiblewomen",
-  "description": "Starter pack for automating tasks in everyday front-end development. 🤖",
+  "name": "#VisibleWomen",
+  "short_name": "#VisibleWomen",
+  "description": "The Visible Women Hashtag",
   "dir": "ltr",
   "lang": "en-US",
   "display": "standalone",

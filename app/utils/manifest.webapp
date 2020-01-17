@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "name": "#visiblewomen",
-  "description": "Starter pack for automating tasks in everyday front-end development. 🤖",
+  "name": "#VisibleWomen",
+  "description": "The Visible Women Hashtag",
   "icons": {
     "60": "./img/favicons/firefox_app_60x60.png",
     "128": "./img/favicons/firefox_app_128x128.png",
