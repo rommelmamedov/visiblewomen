@@ -12,8 +12,8 @@
 		"url": "https://github.com/ramilmamedo/#VisibleWomen/issues"
 	},
 	"scripts": {
-		"start": "yarn && yarn dev",
-		"dev": "gulp build && gulp",
+		"start": "gulp",
+		"init": "yarn && yarn start",
 		"build": "gulp build && gulp docs",
 		"install:clean": "rm -rf node_modules/ package-lock.json yarn.lock && yarn && yarn start"
 	},

@@ -117,8 +117,8 @@ export const favicons = () => {
       appDescription: 'The Visible Women Hashtag',
       dir: 'ltr',
       lang: 'en-US',
-      background: '#fff',
-      theme_color: '#fff',
+      background: 'transparent',
+      theme_color: 'transparent',
       appleStatusBarStyle: 'black-translucent',
       start_url: '.',
       icons: {
