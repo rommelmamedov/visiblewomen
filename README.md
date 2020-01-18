@@ -1,3 +1,3 @@
-# #VisibleWoman
+# #VisibleWomen
 
 The Visible Women Hashtag.

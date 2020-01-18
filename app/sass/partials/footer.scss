@@ -1,5 +1,29 @@
 /*!   === Footer ===   */
 
 .footer {
+  margin-top: 100px;
   padding: 40px 0;
+  border-top: 1px solid $grey;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    .copyright {
+      color: $grey;
+      font-size: $ftz-normal;
+      font-family: $font-semibold;
+    }
+    .footer-links-list {
+      padding: 0;
+      display: flex;
+      list-style: none;
+      li {
+        margin-left: 35px;
+        a {
+          color: $black;
+          font-size: $ftz-normal;
+          font-family: $font-semibold;
+        }
+      }
+    }
+  }
 }

@@ -27,7 +27,7 @@
 html,
 body {
   font-family: sans-serif; // 2
-  font-family: $default-font;
+  font-family: $font-medium;
 }
 
 html {
@@ -63,6 +63,7 @@ body {
   line-height: 1.5;
   font-weight: $fw-400;
   font-size: $ftz-normal;
+  font-family: $font-medium;
   text-align: left; // 3
   background-color: $white; // 2
 }

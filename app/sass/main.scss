@@ -1,10 +1,10 @@
 @import 'helpers/helpers', 'lib/libs', 'partials/partials';
 
 /*!   === Custom Font's  ===   */
-@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Regular');
-@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Medium');
-@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Semibold');
-@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Bold');
+@include font-face('Gilroy-Regular', '../fonts/Gilroy/Gilroy-Regular');
+@include font-face('Gilroy-Medium', '../fonts/Gilroy/Gilroy-Medium');
+@include font-face('Gilroy-Semibold', '../fonts/Gilroy/Gilroy-Semibold');
+@include font-face('Gilroy-Bold', '../fonts/Gilroy/Gilroy-Bold');
 
 /*  Unused Fonts
 @include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Thin');
@@ -36,16 +36,7 @@
 
 /*!   === Main CSS ===   */
 body {
-  color: $white;
-  font-family: $default-font;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100vh;
-  padding: 100px;
-  letter-spacing: 2px;
+  background-color: #fdfdfd;
 }
 
 @import 'pages/pages';
