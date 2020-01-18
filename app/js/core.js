@@ -2,7 +2,13 @@
 
 (function() {
   $(document).ready(function() {
-    // Welcome Console
-    console.log('%c#VisibleWomen is ready for development!', 'color: #ffa500; font-size: 28px; text-shadow: -1px 0 #444, 0 1px #444, 1px 0 #444, 0 -1px #444;');
+    //  Welcome Console
+    //  prettier-ignore
+    console.log(
+      '%c#%cVisible%cWomen',
+      'color: #A97BFF; font-weight: 800; font-size: 28px;',
+      'color: #A97BFF; font-weight: 300; font-size: 28px;',
+      'color: #A97BFF; font-weight: 800; font-size: 28px;'
+    );
   });
 })();
