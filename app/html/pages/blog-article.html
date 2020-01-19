@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% set page = 'Blog Article' %}
+
+{% set articles = [
+  {
+    title: 'Yayoi Kusama, the Modern Alice in Wonderland',
+    img: 'https://picsum.photos/340/280'
+  }, {
+    title: 'The Tremendous Story of Gerda and Lili',
+    img: 'https://picsum.photos/1200/3000'
+  }, {
+    title: 'There are couple of facts that you should definitely know about  UX',
+    img: 'https://picsum.photos/600/800'
+  }, {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero est',
+    img: 'https://picsum.photos/900/1000'
+  }
+] %}
+
+{% block content %}
+<!-- Blog Article -->
+<section class="blog-article">
+  <div class="container">
+    <article>
+      <header class="blog-article-header">
+        <h1 class="article-title">Yayoi Kusama, the Modern Alice in Wonderland</h1>
+        <img class="article-image" src="https://picsum.photos/1000/1200" alt="Article Title">
+        <span class="article-meta">
+          <time class="article-datetime" datetime="2019-06-06">June 6, 2019</time>
+          <address class="article-author"><span>By </span>Dunya Habibi</address>
+        </span>
+      </header>
+      <main class="blog-article-content">
+        <p>
+          Yayoi Kusama was born in 1929 in Matsumoto, Nagano, Japan. At an early age she experienced hallucinations which included seeing lights and dots. In addition Yayoi believed she saw talking flowers and patterns of stones from the nearby river which would come to life in her waking dreams. It
+          was such imagery that stirred the imagination of the young artist, who soon began to draw artistic inspiration from her own visions.
+        </p>
+        <p>
+          Yayoi’s home life was rather chaotic. Her parents could be abusive, and her father was often absent due to extra marital affairs. The artist was sent to work during the second world war, working in a factory sewing parachutes at the age of thirteen. It was a dark period of history for
+          Japan which culminated in the atom bombings of Nagasaki and Hiroshima.
+        </p>
+        <p>
+          After the war Yayoi began to study painting, however she rejected the popular styles of her homeland in favour of a more avant-garde European approach. By 1950 the artist was creating and exhibiting abstract works often incorporating dotted imagery from her hallucinations. Yayoi soon
+          became disenchanted with the Japanese art scene however and moved to New York hoping for a greater appreciation of her work. Here she befriended fellow artists Georgia O’Keeffe and Eva Hesse.
+        </p>
+        <p>
+          By the 1960s, Yayoi was producing work at a fast pace, including her Infinity room installations. Among the daring and often naked impromptu performances or ‘happenings’, she presided over during this era was one entitled ‘Homosexual Wedding’.
+        </p>
+        <p>
+          After a period of ill health Yayoi returned to her homeland in the early 1970s. Here she would undertake various activities from art dealership to writing and poetry. However, suffering from exhaustion, the artist soon entered a hospital for those suffering from mental illness.
+          Nevertheless, Yayoi continued to produce artworks, her style changing to a more colourful approach. By the 1990s the artist began to exhibit her famous pumpkins which she viewed as embodying something of herself, akin to symbolic self-portraits. She continues to work well into her
+          nineties.
+        </p>
+        <p>
+          In her later years Yayoi’s work has continued to achieve huge critical acclaim while also engaging and delighting huge audiences. Having worked in performance, film, poetry, installation, painting, sculpture, fashion and numerous other genres, it is true to say that Yayoi Kusama is a truly
+          multitalented multimedia artist.
+        </p>
+        <p>
+          In her own words…..
+        </p>
+        <p>
+          ‘I, Kusama, am the modern Alice in Wonderland.’
+        </p>
+      </main>
+      <footer class="blog-article-footer">
+        <strong>Did you like the article? Help it spread.</strong>
+        <div class="social-share-buttons">
+          <a class="twitter-share-btn" href="" target="_blank" rel="noopener noreferrer" title="Twitter Share"><i class="icon-twitter"></i> Share</a>
+          <a class="facebook-share-btn" href="" target="_blank" rel="noopener noreferrer" title="Facebook Share"><i class="icon-facebook-official"></i> Share</a>
+        </div>
+      </footer>
+    </article>
+    <section class="related-articles">
+      <h1>Articles you may find interesting</h1>
+      <section class="articles">
+        {% for article in articles %}
+        <figure class="article-card">
+          <a href="blog-article.html" title="{{ article.title }}">
+            <img class="article-image" src="{{ article.img }}" alt="{{ article.title }}">
+          </a>
+          <figcaption class="article-captions">
+            <strong class="article-category">Women in Art</strong>
+            <a href="blog-article.html" title="{{ article.title }}">
+              <h3 class="article-title">{{ article.title }}</h3>
+            </a>
+            <span class="article-meta">
+              <time class="article-datetime" datetime="2019-06-06">June 6, 2019</time>
+              <address class="article-author"><span>By </span>Dunya Habibi</address>
+            </span>
+          </figcaption>
+        </figure>
+        {% endfor %}
+      </section>
+    </section>
+  </div>
+</section>
+<!-- /Blog Article -->
+{% endblock content %}

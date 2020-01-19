@@ -2,11 +2,61 @@
 
 {% set page = 'Blog' %}
 
+{% set articles = [
+  {
+    title: 'Yayoi Kusama, the Modern Alice in Wonderland',
+    img: 'https://picsum.photos/340/280'
+  }, {
+    title: 'The Tremendous Story of Gerda and Lili',
+    img: 'https://picsum.photos/1200/3000'
+  }, {
+    title: 'There are couple of facts that you should definitely know about  UX',
+    img: 'https://picsum.photos/600/800'
+  }, {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero est',
+    img: 'https://picsum.photos/900/1000'
+  }, {
+    title: 'Lorem ipsum dolor sit amet.',
+    img: 'https://picsum.photos/600/700'
+  }, {
+    title: 'Nemo reiciendis accusamus alias!',
+    img: 'https://picsum.photos/600/800'
+  }, {
+    title: 'The Tremendous Story of Gerda and Lili',
+    img: 'https://picsum.photos/1200/3000'
+  }, {
+    title: 'There are couple of facts that you should definitely know about  UX',
+    img: 'https://picsum.photos/600/800'
+  }, {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero est',
+    img: 'https://picsum.photos/900/1000'
+  }
+] %}
+
 {% block content %}
 <!-- Blog -->
 <section class="blog">
   <div class="container">
     <h1>Let’s chitchat a bit <span role="img" aria-label="blue-heart">💙</span></h1>
+    <section class="articles">
+      {% for article in articles %}
+      <figure class="article-card">
+        <a href="blog-article.html" title="{{ article.title }}">
+          <img class="article-image" src="{{ article.img }}" alt="{{ article.title }}">
+        </a>
+        <figcaption class="article-captions">
+          <strong class="article-category">Women in Art</strong>
+          <a href="blog-article.html" title="{{ article.title }}">
+            <h3 class="article-title">{{ article.title }}</h3>
+          </a>
+          <span class="article-meta">
+            <time class="article-datetime" datetime="2019-06-06">June 6, 2019</time>
+            <address class="article-author"><span>By </span>Dunya Habibi</address>
+          </span>
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </section>
   </div>
 </section>
 <!-- /Blog -->

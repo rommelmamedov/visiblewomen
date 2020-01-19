@@ -1,0 +1,57 @@
+/*!   === Article Card ===   */
+
+.articles {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .article-card {
+    width: 340px;
+    border: solid 1px rgba(230, 229, 242, 0.7);
+    margin: 0 0 20px 0;
+    border-radius: 20px;
+    box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.03);
+    background-color: $white;
+    .article-image {
+      width: 100%;
+      height: 280px;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      object-fit: cover;
+    }
+    .article-captions {
+      padding: 15px 40px;
+      font-family: $font-bold;
+      text-align: center;
+      .article-category {
+        color: $purple;
+        font-size: $ftz-extra-small;
+        text-transform: uppercase;
+      }
+      .article-title {
+        margin: 5px 0 20px;
+        color: $black-2;
+        font-size: $ftz-extra-large;
+        line-height: 1.2;
+        text-transform: capitalize;
+      }
+      .article-meta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .article-datetime,
+        .article-author {
+          color: $grey-2;
+          font-size: $ftz-extra-small;
+          font-style: normal;
+        }
+        .article-author {
+          margin-left: 10px;
+          span {
+            color: $grey-3;
+          }
+        }
+      }
+    }
+  }
+}

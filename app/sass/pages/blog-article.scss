@@ -1,0 +1,103 @@
+/*!   === Blog ===   */
+
+.blog-article {
+  margin-top: 70px;
+  margin-bottom: 150px;
+  .blog-article-header {
+    .article-title {
+      margin: 5px 0 20px;
+      color: $black-2;
+      font-family: $font-semibold;
+      font-size: 30px;
+      line-height: 1.2;
+      text-align: center;
+      text-transform: capitalize;
+    }
+    .article-image {
+      width: 100%;
+      height: 427px;
+      margin: 50px 0 30px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      .article-datetime,
+      .article-author {
+        color: $grey-2;
+        font-size: $ftz-large;
+        font-style: normal;
+      }
+      .article-author {
+        margin-left: 10px;
+        span {
+          color: $grey-3;
+        }
+      }
+    }
+  }
+  .blog-article-content {
+    margin: 30px 0;
+    color: $black-2;
+    font-family: $font-regular;
+    font-size: $ftz-large;
+    text-align: justify;
+    p {
+      margin-bottom: 1em;
+    }
+  }
+  .blog-article-footer {
+    display: flex;
+    align-items: center;
+    strong {
+      margin-right: 20px;
+      color: $grey-2;
+      font-family: $font-bold;
+      font-size: $ftz-large;
+    }
+    .social-share-buttons {
+      display: flex;
+      align-items: center;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 4px 2px;
+        border-radius: 2px;
+        i {
+          margin-right: 2px;
+          line-height: unset;
+        }
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+        &.twitter-share-btn {
+          border: solid 1px #cccccc;
+          color: $black;
+          font-size: $ftz-small;
+          background-image: linear-gradient(to bottom, #fefefe, #dfdfdf);
+          text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+          i {
+            color: #00acee;
+          }
+        }
+        &.facebook-share-btn {
+          color: $white;
+          font-size: $ftz-small;
+          background-image: linear-gradient(to bottom, #4b68ba, #3a56a1);
+        }
+      }
+    }
+  }
+  .related-articles {
+    margin: 80px 0;
+    h1 {
+      color: $black-3;
+      font-family: $font-semibold;
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 35px;
+    }
+  }
+}
