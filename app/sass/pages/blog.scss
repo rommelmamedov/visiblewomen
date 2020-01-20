@@ -3,11 +3,18 @@
 .blog {
   margin-top: 70px;
   margin-bottom: 150px;
+  @media (max-width: $breakpoint-lg) {
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
   h1 {
     margin-bottom: 35px;
     color: $black-3;
     font-family: $font-semibold;
     font-size: 30px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
   }
-
 }

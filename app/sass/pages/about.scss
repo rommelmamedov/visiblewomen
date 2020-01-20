@@ -1,0 +1,26 @@
+/*!   === About ===   */
+
+.about {
+  margin-top: 70px;
+  h1 {
+    margin: 5px 0 20px;
+    color: $black-2;
+    font-family: $font-semibold;
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .about-content {
+    margin-bottom: 150px;
+    padding: 0 20px;
+    margin: 30px auto;
+    color: $black-2;
+    font-family: $font-regular;
+    font-size: $ftz-large;
+    text-align: justify;
+    p {
+      margin-bottom: 1em;
+    }
+  }
+}

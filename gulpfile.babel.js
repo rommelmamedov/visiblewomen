@@ -77,6 +77,7 @@ export const clear = () => {
   return del(paths.dist.root);
 };
 
+
 //  Create docs directory for GitHub pages.
 export const docs = () => {
   return gulp.src('./dist/**/*').pipe(gulp.dest('./docs/'));

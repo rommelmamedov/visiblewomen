@@ -9,16 +9,31 @@
     font-family: $font-semibold;
     font-size: $ftz-normal;
     border-top: 1px solid $grey;
+    @media (max-width: $breakpoint-lg) {
+      align-items: center;
+      flex-direction: column-reverse;
+    }
     .copyright {
+      margin-top: 20px;
       color: $grey;
-
+      @media (max-width: $breakpoint-md) {
+        text-align: center;
+        padding: 0 60px;
+      }
     }
     .footer-links-list {
       display: flex;
       padding: 0;
       list-style: none;
+      @media (max-width: $breakpoint-md) {
+        flex-direction: column;
+      }
       li {
         margin-left: 35px;
+        @media (max-width: $breakpoint-md) {
+          margin-left: unset;
+          text-align: center;
+        }
         a {
           color: $black;
         }

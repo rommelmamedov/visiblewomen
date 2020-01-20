@@ -4,6 +4,9 @@
   position: fixed;
   right: 30px;
   top: 50%;
+  @media (max-width: $breakpoint-lg) {
+    display: none;
+  }
   a {
     width: 63px;
     height: 63px;

@@ -26,7 +26,7 @@
 */
 
 @include placeholder {
-  color: $black;
+  color: #c0ccda;
 }
 
 @include selection {
@@ -37,6 +37,9 @@
 /*!   === Main CSS ===   */
 body {
   background-color: #fdfdfd;
+  @media (max-width: $breakpoint-lg) {
+    position: relative;
+  }
 }
 
 @import 'pages/pages';
