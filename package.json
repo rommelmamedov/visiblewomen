@@ -15,7 +15,7 @@
 		"start": "gulp",
 		"init": "yarn && yarn start",
 		"build": "gulp build && gulp docs",
-		"deploy": "yarn build && git status && git add . && git commit -m 'automated git commit 😴 && git push'",
+		"deploy": "yarn build && git status && git commit -a -m \"automated git commit 😴\" && git push",
 		"install:clean": "rm -rf node_modules/ package-lock.json yarn.lock && yarn && yarn start"
 	},
 	"dependencies": {

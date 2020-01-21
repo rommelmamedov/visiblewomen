@@ -38,30 +38,40 @@
       align-items: center;
       flex-wrap: wrap;
       .tag {
-        margin-right: 10px;
-        margin-bottom: 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 215px;
         height: 40px;
+        padding: 0 20px;
+        margin-right: 10px;
+        margin-bottom: 10px;
         border-radius: 25px;
         background-color: #e2edfa;
-        padding: 0 20px;
+
         .text {
           color: #458cdf;
           font-family: $font-semibold;
           font-size: $ftz-normal;
         }
         .clear-icon {
-          cursor: pointer;
           display: block;
-          height: 10px;
           width: 10px;
+          height: 10px;
+          cursor: pointer;
           background-position: center;
           background-size: contain;
           background-repeat: no-repeat;
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23458CDF' d='M.782 0L.025.759l4.218 4.228L0 9.249.749 10 5 5.746 9.243 10 10 9.241 5.757 4.987 9.975.759 9.218 0 5 4.229z'/%3E%3C/svg%3E");
+        }
+        &.country {
+          background-color: #e9e2fa;
+          .text {
+            color: #a97bff;
+          }
+          .clear-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23a97bff' d='M.782 0L.025.759l4.218 4.228L0 9.249.749 10 5 5.746 9.243 10 10 9.241 5.757 4.987 9.975.759 9.218 0 5 4.229z'/%3E%3C/svg%3E");
+          }
         }
       }
     }
@@ -89,5 +99,17 @@
         font-size: $ftz-large;
       }
     }
+  }
+  .twitter-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .final-result {
+    margin: 130px 0 230px;
+    color: #242424;
+    font-family: $font-regular;
+    font-size: 20px;
+    text-align: center;
   }
 }

@@ -2,6 +2,19 @@
 
 {% set page = 'Index' %}
 
+{% set tweets = [
+  {
+    avatar: 'https://picsum.photos/200/200',
+    title: 'umaimah',
+    username: '@ColouredBraids',
+    text: 'Hi #visiblewomen 💖
+    I’m Umayma. I’m Nigerian & I love character designing , sapphic themes and using pink.
+    🌸Portfolio- https://umaymad.weebly.com',
+    link: 'https://umaymad.weebly.com',
+    img: 'https://picsum.photos/340/280'
+  }
+] %}
+
 {% block content %}
 <!-- Index -->
 <section class="index">
@@ -17,19 +30,7 @@
           <span class="text">Character Designer</span>
           <span class="clear-icon"></span>
         </div>
-        <div class="tag">
-          <span class="text">Character Designer</span>
-          <span class="clear-icon"></span>
-        </div>
-        <div class="tag">
-          <span class="text">Character Designer</span>
-          <span class="clear-icon"></span>
-        </div>
-        <div class="tag">
-          <span class="text">Character Designer</span>
-          <span class="clear-icon"></span>
-        </div>
-        <div class="tag">
+        <div class="tag country">
           <span class="text">Character Designer</span>
           <span class="clear-icon"></span>
         </div>
@@ -39,6 +40,30 @@
         <p>You have no pinned items</p>
       </div>
     </section>
+    <section class="twitter-cards">
+      {% for tweet in tweets %}
+      <figure class="tweet">
+        <div class="tweet-header">
+          <div class="user-info">
+            <img class="avatar" src="{{ tweet.avatar }}" alt="{{ tweet.title }}">
+            <div class="title-username">
+              <div class="title">{{ tweet.title }}</div>
+              <div class="username">{{ tweet.username }}</div>
+            </div>
+          </div>
+          <div class="tweet-actions">
+            <span class="pin"></span>
+            <span class="twitter"></span>
+          </div>
+        </div>
+        <div class="tweet-text">{{ tweet.text }}</div>
+        <div class="tweet-media">
+          <img src="{{ tweet.img }}" alt="">
+        </div>
+      </figure>
+      {% endfor %}
+    </section>
+    <h3 class="final-result">Hey! You have reached the end of results.</h3>
   </div>
 </section>
 <!-- /Index -->
