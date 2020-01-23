@@ -9,7 +9,7 @@ import gulp from 'gulp';
 import merge from 'merge-stream';
 import browserSync from 'browser-sync';
 import plugins from 'gulp-load-plugins';
-import validator from 'gulp-w3c-html-validator';
+// import validator from 'gulp-w3c-html-validator';
 
 //  Global Constants
 const $ = plugins(),
@@ -20,6 +20,7 @@ const $ = plugins(),
       html: {
         main: './app/html/',
         all: './app/html/pages/*.html',
+        entire: './app/html/**/*'
       },
       styles: {
         root: './app/sass/',
@@ -29,12 +30,10 @@ const $ = plugins(),
       scripts: {
         main: './app/js/core.js',
         all: './app/js/**/*.js',
-        //  You can specify the path to JavaScript libs that you're going to use in this `libs` array,
-        //  so gulp will concat and minifying them into the one final file.
         //  prettier-ignore
         libs: [
           './app/js/lib/jquery.min.js',
-          // './app/js/lib/masonry.js',
+          './app/js/lib/masonry.js',
           // './app/js/lib/easy-autocomplete.js',
           // './app/js/lib/scrolltop.js',
         ],
@@ -73,15 +72,10 @@ const $ = plugins(),
 $.sass().compiler = require('node-sass');
 
 //  Removing the production directory.
-export const clear = () => {
-  return del(paths.dist.root);
-};
-
+export const clear = () => del(paths.dist.root);
 
 //  Create docs directory for GitHub pages.
-export const docs = () => {
-  return gulp.src('./dist/**/*').pipe(gulp.dest('./docs/'));
-};
+export const docs = () => gulp.src('./dist/**/*').pipe(gulp.dest('./docs/'));
 
 //  Moving website's utils, credentials, fonts, and etc. to the production directory.
 export const utils = () => {
@@ -244,12 +238,12 @@ export const img = () => {
       removeEmptyAttrs: true,
       removeEmptyText: true,
       removeUnusedNS: true,
-    },
-    webpOptions = {
-      lossless: true,
-      quality: 70,
-      alphaQuality: 90,
     };
+    // webpOptions = {
+    //   lossless: true,
+    //   quality: 70,
+    //   alphaQuality: 90,
+    // };
   return (
     gulp
       .src(paths.app.images.main, { since: gulp.lastRun(img) })
@@ -291,25 +285,25 @@ export const html = () => {
  * For more about used CSS here: {@link https://bit.ly/2XPqEin#css}
  **/
 export const css = () => {
-  const //  Files to search through for used classes (HTML, JS and etc., basically anything that uses CSS selectors).
-    purifyContent = ['./dist/js/*.js', './dist/*.html'],
-    styleLintSetting = {
-      debug: true,
-      reporters: [{ formatter: 'string', console: true }],
-    },
-    plugins = [
-      require('autoprefixer')(),
+  // const //  Files to search through for used classes (HTML, JS and etc., basically anything that uses CSS selectors).
+    // purifyContent = ['./dist/js/*.js', './dist/*.html'],
+    // styleLintSetting = {
+    //   debug: true,
+    //   reporters: [{ formatter: 'string', console: true }],
+    // },
+    // plugins = [
+      // require('autoprefixer')(),
       // require('css-mqpacker')({ sort: true }),
       // require('cssnano')({ safe: true }),
       // require('css-declaration-sorter')({ order: 'smacss' }),
-    ];
+    // ];
   return (
     gulp
       .src(paths.app.styles.main)
       .pipe($.plumber())
       .pipe($.sass({ outputStyle: 'compressed' }))
       // .pipe($.purifycss(purifyContent)) // (Optional) disable if you don't want to cut unused CSS.
-      .pipe($.postcss(plugins)) // (Optional) disable if you don't want to use PostCSS plugins.
+      // .pipe($.postcss(plugins)) // (Optional) disable if you don't want to use PostCSS plugins.
       // .pipe($.csso())
       .pipe($.rename({ suffix: '.min' }))
       //  .pipe($.stylelint(styleLintSetting)) // (Optional) enable if you need to lint final CSS file.
@@ -353,13 +347,12 @@ export const watchFiles = () => {
   gulp.watch(paths.app.images.main, img);
   gulp.watch(paths.app.styles.all, css);
   gulp.watch(paths.app.scripts.all, js);
-  gulp.watch('./app/html/**/*', html);
+  gulp.watch(paths.app.html.entire, html);
 };
 
 //  Export Complex Tasks
 export const credentials = gulp.series(favicons, utils, img);
 export const main = gulp.parallel(img, utils, html, js, css);
-export const watch = gulp.parallel(watchFiles, server);
 export const build = gulp.series(clear, main, docs);
-export const dev = gulp.series(main, watch);
+export const dev = gulp.series(server, main, watchFiles);
 exports.default = dev;
