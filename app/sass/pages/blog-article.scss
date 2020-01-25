@@ -19,20 +19,20 @@
       margin: 5px 0 20px;
       color: $black-2;
       font-family: $font-semibold;
-      font-size: 30px;
+      font-size: $ftz-biggest;
       line-height: 1.2;
       text-align: center;
       text-transform: capitalize;
       @media (max-width: $breakpoint-lg) {
         text-align: left;
-        font-size: 24px;
+        font-size:   $ftz-maxi;
       }
     }
     .article-image {
       width: 100%;
       height: 427px;
       margin: 50px 0 30px;
-      border-radius: 20px;
+      border-radius: $border-r-20;
       object-fit: cover;
       @media (max-width: $breakpoint-lg) {
         border-radius: 0;
@@ -134,7 +134,7 @@
     h1 {
       color: $black-3;
       font-family: $font-semibold;
-      font-size: 30px;
+      font-size:  $ftz-biggest;
       font-weight: 600;
       margin-bottom: 35px;
     }

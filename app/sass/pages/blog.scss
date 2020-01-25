@@ -11,10 +11,10 @@
     margin-bottom: 35px;
     color: $black-3;
     font-family: $font-semibold;
-    font-size: 30px;
+    font-size: $ftz-biggest;
     @media (max-width: $breakpoint-lg) {
       margin-bottom: 20px;
-      font-size: 24px;
+      font-size: $ftz-maxi;
     }
   }
 }

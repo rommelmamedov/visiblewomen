@@ -51,12 +51,12 @@
         padding: 0 20px;
         margin-right: 10px;
         margin-bottom: 10px;
-        border-radius: 25px;
+        border-radius: $border-r-25;
         background-color: #e2edfa;
         @media (max-width: $breakpoint-lg) {
           height: 23px;
           padding: 0 10px;
-          border-radius: 25px;
+          border-radius: $border-r-25;
         }
         @media (max-width: $breakpoint-md) {
           flex: 0 0 auto;
@@ -68,7 +68,7 @@
           font-size: $ftz-normal;
           @media (max-width: $breakpoint-lg) {
             margin-right: 5px;
-            font-size: 12px;
+            font-size:   $ftz-extra-small;
           }
         }
         .clear-icon {
@@ -88,7 +88,7 @@
         &.country {
           background-color: #e9e2fa;
           .text {
-            color: #a97bff;
+            color: $purple;
           }
           .clear-icon {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23a97bff' d='M.782 0L.025.759l4.218 4.228L0 9.249.749 10 5 5.746 9.243 10 10 9.241 5.757 4.987 9.975.759 9.218 0 5 4.229z'/%3E%3C/svg%3E");
@@ -119,7 +119,7 @@
       a {
         display: inline-block;
         margin-left: 10px;
-        color: #242424;
+        color: $black-4;
         font-family: $font-medium;
         font-size: $ftz-large;
         @media (max-width: $breakpoint-lg) {
@@ -136,7 +136,7 @@
   }
   .final-result {
     margin: 130px 0 230px;
-    color: #242424;
+    color: $black-4;
     font-family: $font-regular;
     font-size: 20px;
     text-align: center;

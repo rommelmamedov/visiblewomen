@@ -8,18 +8,18 @@
     justify-content: space-between;
     margin: 45px 0 35px;
     h1 {
-      color: #c0ccda;
+      color: $grey;
       font-family: $font-semibold;
-      font-size: 30px;
+      font-size:  $ftz-biggest;
       span {
-        color: #04087f;
+        color: $blue;
         font-family: $font-bold;
       }
     }
     a {
       display: flex;
       align-items: center;
-      color: #242424;
+      color: $black-4;
       font-family: $font-medium;
       font-size: $ftz-large;
       text-decoration: underline;
