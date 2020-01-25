@@ -30,5 +30,11 @@
       $('.be-visible').removeClass('active');
       $('body').css('overflow', 'unset');
     });
+    $('.input-submit-btn').on('click', function (e) {
+      e.preventDefault();
+      $(this).addClass('submitted');
+      $('.be-visible .dialog-title').text('Wohooo!');
+      $('.be-visible .dialog-desc').text('Your tweet is submitted.');
+    });
   });
 })();

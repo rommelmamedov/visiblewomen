@@ -285,25 +285,25 @@ export const html = () => {
  * For more about used CSS here: {@link https://bit.ly/2XPqEin#css}
  **/
 export const css = () => {
-  // const //  Files to search through for used classes (HTML, JS and etc., basically anything that uses CSS selectors).
-  // purifyContent = ['./dist/js/*.js', './dist/*.html'],
-  // styleLintSetting = {
-  //   debug: true,
-  //   reporters: [{ formatter: 'string', console: true }],
-  // },
-  // plugins = [
-  // require('autoprefixer')(),
-  // require('css-mqpacker')({ sort: true }),
-  // require('cssnano')({ safe: true }),
-  // require('css-declaration-sorter')({ order: 'smacss' }),
-  // ];
+  const //  Files to search through for used classes (HTML, JS and etc., basically anything that uses CSS selectors).
+  purifyContent = ['./dist/js/*.js', './dist/*.html'],
+  styleLintSetting = {
+    debug: true,
+    reporters: [{ formatter: 'string', console: true }],
+  },
+  plugins = [
+    require('autoprefixer')(),
+    require('css-mqpacker')({ sort: true }),
+    require('cssnano')({ safe: true }),
+    require('css-declaration-sorter')({ order: 'smacss' }),
+  ];
   return (
     gulp
       .src(paths.app.styles.main)
       .pipe($.plumber())
       .pipe($.sass({ outputStyle: 'compressed' }))
-      // .pipe($.purifycss(purifyContent)) // (Optional) disable if you don't want to cut unused CSS.
-      // .pipe($.postcss(plugins)) // (Optional) disable if you don't want to use PostCSS plugins.
+      .pipe($.purifycss(purifyContent)) // (Optional) disable if you don't want to cut unused CSS.
+      .pipe($.postcss(plugins)) // (Optional) disable if you don't want to use PostCSS plugins.
       // .pipe($.csso())
       .pipe($.rename({ suffix: '.min' }))
       //  .pipe($.stylelint(styleLintSetting)) // (Optional) enable if you need to lint final CSS file.
