@@ -14,9 +14,9 @@
       flex-direction: column-reverse;
     }
     .copyright {
-      margin-top: 20px;
       color: $grey;
       @media (max-width: $breakpoint-md) {
+        margin-top: 20px;
         text-align: center;
         padding: 0 60px;
       }

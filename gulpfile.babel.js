@@ -9,7 +9,7 @@ import gulp from 'gulp';
 import merge from 'merge-stream';
 import browserSync from 'browser-sync';
 import plugins from 'gulp-load-plugins';
-// import validator from 'gulp-w3c-html-validator';
+import validator from 'gulp-w3c-html-validator';
 
 //  Global Constants
 const $ = plugins(),
@@ -286,27 +286,27 @@ export const html = () => {
  **/
 export const css = () => {
   const //  Files to search through for used classes (HTML, JS and etc., basically anything that uses CSS selectors).
-  purifyContent = ['./dist/js/*.js', './dist/*.html'],
-  styleLintSetting = {
-    debug: true,
-    reporters: [{ formatter: 'string', console: true }],
-  },
-  plugins = [
-    require('autoprefixer')(),
-    require('css-mqpacker')({ sort: true }),
-    require('cssnano')({ safe: true }),
-    require('css-declaration-sorter')({ order: 'smacss' }),
-  ];
+    // purifyContent = [paths.app.scripts.all, paths.app.html.all],
+    // styleLintSetting = {
+    //   debug: true,
+    //   reporters: [{ formatter: 'string', console: true }],
+    // },
+    plugins = [
+      require('autoprefixer')(),
+      require('css-mqpacker')({ sort: true }),
+      // require('cssnano')({ safe: true }),
+      require('css-declaration-sorter')({ order: 'smacss' }),
+    ];
   return (
     gulp
       .src(paths.app.styles.main)
       .pipe($.plumber())
       .pipe($.sass({ outputStyle: 'compressed' }))
-      .pipe($.purifycss(purifyContent)) // (Optional) disable if you don't want to cut unused CSS.
+      // .pipe($.purifycss(purifyContent)) // (Optional) disable if you don't want to cut unused CSS.
       .pipe($.postcss(plugins)) // (Optional) disable if you don't want to use PostCSS plugins.
       // .pipe($.csso())
       .pipe($.rename({ suffix: '.min' }))
-      //  .pipe($.stylelint(styleLintSetting)) // (Optional) enable if you need to lint final CSS file.
+      // .pipe($.stylelint(styleLintSetting)) // (Optional) enable if you need to lint final CSS file.
       .pipe(gulp.dest(paths.dist.css))
       .pipe($.size({ title: 'CSS Size:' }))
       .pipe($.debug({ title: 'CSS File:' }))

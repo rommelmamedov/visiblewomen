@@ -79,7 +79,7 @@
       </div>
       <label for="country">Sort by country</label>
       <div class="input-group">
-        <input class="input" name="country" type="text" placeholder="Add country">
+        <input class="input" id="country" name="country" type="text" placeholder="Add country">
       </div>
     </section>
     <section class="tags-and-pin">
@@ -116,7 +116,7 @@
         </div>
         <div class="tweet-text">{{ tweet.text|safe }}</div>
         <div class="tweet-media">
-          <img src="{{ tweet.img }}" alt="">
+          <img src="{{ tweet.img }}" alt="Tweet Media">
         </div>
       </figure>
       {% endfor %}
