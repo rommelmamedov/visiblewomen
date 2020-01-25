@@ -20,7 +20,7 @@ const $ = plugins(),
       html: {
         main: './app/html/',
         all: './app/html/pages/*.html',
-        entire: './app/html/**/*'
+        entire: './app/html/**/*',
       },
       styles: {
         root: './app/sass/',
@@ -232,18 +232,18 @@ export const server = done => {
  **/
 export const img = () => {
   const svgOptions = {
-      removeViewBox: false,
-      collapseGroups: true,
-      removeComments: true,
-      removeEmptyAttrs: true,
-      removeEmptyText: true,
-      removeUnusedNS: true,
-    };
-    // webpOptions = {
-    //   lossless: true,
-    //   quality: 70,
-    //   alphaQuality: 90,
-    // };
+    removeViewBox: false,
+    collapseGroups: true,
+    removeComments: true,
+    removeEmptyAttrs: true,
+    removeEmptyText: true,
+    removeUnusedNS: true,
+  };
+  // webpOptions = {
+  //   lossless: true,
+  //   quality: 70,
+  //   alphaQuality: 90,
+  // };
   return (
     gulp
       .src(paths.app.images.main, { since: gulp.lastRun(img) })
@@ -286,17 +286,17 @@ export const html = () => {
  **/
 export const css = () => {
   // const //  Files to search through for used classes (HTML, JS and etc., basically anything that uses CSS selectors).
-    // purifyContent = ['./dist/js/*.js', './dist/*.html'],
-    // styleLintSetting = {
-    //   debug: true,
-    //   reporters: [{ formatter: 'string', console: true }],
-    // },
-    // plugins = [
-      // require('autoprefixer')(),
-      // require('css-mqpacker')({ sort: true }),
-      // require('cssnano')({ safe: true }),
-      // require('css-declaration-sorter')({ order: 'smacss' }),
-    // ];
+  // purifyContent = ['./dist/js/*.js', './dist/*.html'],
+  // styleLintSetting = {
+  //   debug: true,
+  //   reporters: [{ formatter: 'string', console: true }],
+  // },
+  // plugins = [
+  // require('autoprefixer')(),
+  // require('css-mqpacker')({ sort: true }),
+  // require('cssnano')({ safe: true }),
+  // require('css-declaration-sorter')({ order: 'smacss' }),
+  // ];
   return (
     gulp
       .src(paths.app.styles.main)
@@ -354,5 +354,5 @@ export const watchFiles = () => {
 export const credentials = gulp.series(favicons, utils, img);
 export const main = gulp.parallel(img, utils, html, js, css);
 export const build = gulp.series(clear, main, docs);
-export const dev = gulp.series(server, main, watchFiles);
+export const dev = gulp.series(server, watchFiles, main);
 exports.default = dev;
