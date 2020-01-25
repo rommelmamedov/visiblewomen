@@ -1,0 +1,56 @@
+[role='dialog'] {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  z-index: $z-4;
+  display: none;
+  width: 879px;
+  height: 557px;
+  padding: 80px 90px;
+  transform: translate(-50%);
+  border-radius: $border-r-20;
+  background-color: $white;
+  background-repeat: no-repeat;
+  &.be-visible {
+    background-position: 100% 100%;
+    background-image: url('../img/icons/be-visible.svg');
+  }
+  .text {
+    margin: 70px 0 50px;
+    h1 {
+      margin: 0;
+      color: $black-3;
+      font-family: $font-bold;
+      font-size: $ftz-biggest;
+    }
+  }
+  .dialog-close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+    border: unset;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 10 10'%3E%3Cpath fill='%23c0ccda' d='M.782 0L.025.759l4.218 4.228L0 9.249.749 10 5 5.746 9.243 10 10 9.241 5.757 4.987 9.975.759 9.218 0 5 4.229z'/%3E%3C/svg%3E");
+  }
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-1;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.38);
+  &.active {
+    display: block;
+  }
+}
+
