@@ -15,19 +15,33 @@
     }); //  dialog-overlay
     //  be-visible
 
-    $('.header button').on('click', function () {
-      $('.dialog-overlay').addClass('active');
-      $('.be-visible').addClass('active');
-      $('body').css('overflow', 'hidden');
-    });
-    $('.be-visible .dialog-close-btn').on('click', function () {
-      $('.dialog-overlay').removeClass('active');
-      $('.be-visible').removeClass('active');
-      $('body').css('overflow', 'unset');
-    });
+    var openModal = function openModal(clickItem, modalClass) {
+      $("".concat(clickItem)).on('click', function () {
+        $('.dialog-overlay').addClass('active');
+        $("".concat(modalClass)).addClass('active');
+        $('body').css('overflow', 'hidden');
+      });
+    };
+
+    var closeModal = function closeModal(className) {
+      $("".concat(className, " .dialog-close-btn")).on('click', function () {
+        $('.dialog-overlay').removeClass('active');
+        $("".concat(className)).removeClass('active');
+        $('body').css('overflow', 'unset');
+      });
+    };
+
+    openModal('.header .subscribe', '.subscribe');
+    openModal('.header button', '.be-visible');
+    openModal('.send-pin-btn', '.send-pin');
+    closeModal('.be-visible');
+    closeModal('.subscribe');
+    closeModal('.send-pin');
     $('.dialog-overlay').on('click', function () {
       $('.dialog-overlay').removeClass('active');
       $('.be-visible').removeClass('active');
+      $('.subscribe').removeClass('active');
+      $('.send-pin').removeClass('active');
       $('body').css('overflow', 'unset');
     });
     $('.input-submit-btn').on('click', function (e) {
@@ -36,5 +50,17 @@
       $('.be-visible #dialog-title').text('Wohooo!');
       $('.be-visible #dialog-desc').text('Your tweet is submitted.');
     });
+    $('.input-submit-btn').on('click', function (e) {
+      e.preventDefault();
+      $(this).addClass('submitted');
+      $('.subscribe #dialog-title').text('It’s done!');
+      $('.subscribe #dialog-desc').text('You’re one of us now.');
+    });
+    $('.input-submit-btn').on('click', function (e) {
+      e.preventDefault();
+      $(this).addClass('submitted');
+      $('.send-pin #dialog-title').text('We’ve sent your e-mail the');
+      $('.send-pin #dialog-desc').text('pinned items list.');
+    }); //  be-visible
   });
 })();

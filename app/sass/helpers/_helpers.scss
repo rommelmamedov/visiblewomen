@@ -1,1 +1,28 @@
-@import 'vars.scss', 'mixins.scss', 'global.scss', 'grid.scss', 'icons.scss';
+@import 'vars.scss', 'mixins.scss';
+
+/*!   === Custom Font's  ===   */
+@include font-face('Gilroy-Regular', '../fonts/Gilroy/Gilroy-Regular');
+@include font-face('Gilroy-Medium', '../fonts/Gilroy/Gilroy-Medium');
+@include font-face('Gilroy-Semibold', '../fonts/Gilroy/Gilroy-Semibold');
+@include font-face('Gilroy-Bold', '../fonts/Gilroy/Gilroy-Bold');
+
+/*  Unused Fonts
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Thin');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Black');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Heavy');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-Light');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-ExtraBold');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-BoldItalic');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-ThinItalic');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-UltraLight');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-BlackItalic');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-HeavyItalic');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-LightItalic');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-MediumItalic');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-RegularItalic');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-SemiBoldItalic');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-ExtraBoldItalic');
+@include font-face('Gilroy', '../fonts/Gilroy/Gilroy-UltraLightItalic');
+*/
+
+@import 'global.scss', 'grid.scss', 'icons.scss';

@@ -15,6 +15,20 @@
     background-position: 100% 100%;
     background-image: url('../img/icons/be-visible.svg');
   }
+  &.subscribe {
+    background-position: 100% 60%;
+    background-image: url('../img/icons/subscribe.svg');
+    &.active {
+      display: block;
+    }
+  }
+  &.send-pin {
+    background-position: 100% 100%;
+    background-image: url('../img/icons/pin-list.svg');
+    &.active {
+      display: block;
+    }
+  }
   .text {
     margin: 70px 0 50px;
     h1 {
@@ -34,7 +48,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 10 10'%3E%3Cpath fill='%23c0ccda' d='M.782 0L.025.759l4.218 4.228L0 9.249.749 10 5 5.746 9.243 10 10 9.241 5.757 4.987 9.975.759 9.218 0 5 4.229z'/%3E%3C/svg%3E");
+    @include dialog-close-btn;
   }
 }
 
@@ -54,3 +68,10 @@
   }
 }
 
+.be-visible,
+.subscribe,
+.send-pin {
+  .input-group {
+    width: 430px;
+  }
+}
