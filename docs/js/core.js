@@ -4,7 +4,31 @@
   $(document).ready(function () {
     //  Welcome Console
     //  prettier-ignore
-    console.log('%c#%cVisible%cWomen', 'color: #A97BFF; font-weight: 800; font-size: 28px;', 'color: #A97BFF; font-weight: 300; font-size: 28px;', 'color: #A97BFF; font-weight: 800; font-size: 28px;');
+    console.log('%c#%cVisible%cWomen', 'color: #A97BFF; font-weight: 800; font-size: 28px;', 'color: #A97BFF; font-weight: 300; font-size: 28px;', 'color: #A97BFF; font-weight: 800; font-size: 28px;'); // $(document).scroll(function() {
+    //   checkOffset();
+    // });
+    // function checkOffset() {
+    //   // if ($('button.filled').offset().top + $('button.filled').height() >= $('.footer').offset().top - 20) {
+    //   //   $('button.filled').css('position', 'absolute');
+    //   // }
+    //   if ($(document).scrollTop() + window.innerHeight < $('.footer').offset().top) {
+    //     $('button.filled').css('position', 'fixed');
+    //   }
+    // }
+
+    function checkOffset() {
+      var a = $(document).scrollTop() + window.innerHeight;
+      var b = $('.footer').offset().top;
+
+      if (a > b) {
+        $('button.filled').addClass('fadeOut animated');
+      } else {
+        $('button.filled').removeClass('fadeOut animated');
+      }
+    }
+
+    $(document).ready(checkOffset);
+    $(document).scroll(checkOffset);
     var $grid = $('.twitter-cards').imagesLoaded(function () {
       $grid.masonry({
         itemSelector: '.tweet',
