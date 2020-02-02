@@ -6,14 +6,6 @@
   <title> #VisibleWomen | The Visible Women Hashtag </title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!--  Perfecting, Preloading -->
-  <!--
-  (Uncomment this section if you need to prefetch Google Fonts)
-  <link rel="preconnect" href="https://fonts.gstatic.com/" />
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com/" />
-  <link rel="preload" href="https://fonts.googleapis.com/your-font-here" as="style" />
-  <link rel="prefetch" href="https://fonts.googleapis.com/your-font-here" as="style" />
-  -->
   <!--  Some SEO Tags -->
   <link rel="index" href="https://hashtagvisiblewomen.com/" />
   <link rel="canonical" href="https://hashtagvisiblewomen.com/" />
@@ -65,392 +57,41 @@
   <link rel="icon" type="image/png" sizes="512x512" href="./img/favicons/android-chrome-512x512.png" />
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./img/favicons/apple-touch-icon-180x180.png" />
   <link rel="apple-touch-icon-precomposed" type="image/png" href="./img/favicons/apple-touch-icon-precomposed.png" />
-  <!--  Fonts -->
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/your-font-here" /> -->
   <!--  Style Sheets -->
   <link rel="stylesheet" href="css/main.min.css" />
 </head>
 
-<body class="home">
+<body class="">
   <!--[if IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please
       <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.
     </p>
   <![endif]-->
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <nav>
-        <a href="/" title="#VisibleWomen">
-          <img class="logo" src="./img/logo.svg" alt="#VisibleWomen - Logo">
-        </a>
-        <ul class="header-links-list">
-          <li><a class="blog active" href="blog.html" title="Blog">Blog</a></li>
-          <li><a class="subscribe" href="#" title="Subscribe">Subscribe</a></li>
-          <li><button class="filled" type="button">Be Visible</button></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- /Header -->
   <main class="main">
     <!-- Index -->
     <section class="index">
       <div class="container">
-        <section class="inputs">
-          <div class="input-group">
-            <input class="input" name="role" type="text" placeholder="Add more roles">
+        <!-- Dialog Intro -->
+        <section class="intro" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc">
+          <a href="/home.html" title="#VisibleWomen">
+            <img class="logo" src="./img/logo.svg" alt="#VisibleWomen - Logo">
+          </a>
+          <div class="text">
+            <h1 id="dialog-title">What type of artist are you</h1>
+            <h1 id="dialog-desc">looking for?</h1>
           </div>
-          <label for="country">Sort by country</label>
-          <div class="input-group">
-            <input class="input" id="country" name="country" type="text" placeholder="Add country">
-          </div>
+          <form id="intro">
+            <div class="input-group">
+              <input class="input" name="role" type="text" placeholder="Character Designer...">
+              <button class="input-submit-btn" type="submit"></button>
+            </div>
+          </form>
         </section>
-        <section class="tags-and-pin">
-          <div class="tags">
-            <div class="tag">
-              <span class="text">Character Designer</span>
-              <span class="clear-icon"></span>
-            </div>
-            <div class="tag country">
-              <span class="text">Character Designer</span>
-              <span class="clear-icon"></span>
-            </div>
-          </div>
-          <div class="pin">
-            <span class="pin-icon"></span>
-            <a href="pinned-items.html" title="Pinned Items">You have no pinned items</a>
-          </div>
-        </section>
-        <section class="twitter-cards">
-          <figure class="tweet">
-            <div class="tweet-header">
-              <div class="user-info">
-                <img class="avatar" src="https://loremflickr.com/200/200" alt="umaimah">
-                <div class="title-username">
-                  <div class="title">umaimah</div>
-                  <div class="username">@ColouredBraids</div>
-                </div>
-              </div>
-              <div class="tweet-actions">
-                <span class="pin active"></span>
-                <span class="twitter"></span>
-              </div>
-            </div>
-            <div class="tweet-text">Hi <a>#visiblewomen</a> 💖 I’m Umayma. I’m Nigerian & I love character designing , sapphic themes and using pink. 🌸Portfolio- <a href="https://umaymad.weebly.com">https://umaymad.weebly.com</a></div>
-            <div class="tweet-media">
-              <img src="https://loremflickr.com/340/270" alt="Tweet Media">
-            </div>
-          </figure>
-          <figure class="tweet">
-            <div class="tweet-header">
-              <div class="user-info">
-                <img class="avatar" src="https://loremflickr.com/200/200" alt="umaimah">
-                <div class="title-username">
-                  <div class="title">umaimah</div>
-                  <div class="username">@ColouredBraids</div>
-                </div>
-              </div>
-              <div class="tweet-actions">
-                <span class="pin "></span>
-                <span class="twitter"></span>
-              </div>
-            </div>
-            <div class="tweet-text">Hi <a>#visiblewomen</a> 💖 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sit minus animi praesentium vitae reprehenderit molestias porro dolore aspernatur explicabo quam molestiae a ut id, quo maiores illo. Esse, reiciendis. I’m Umayma. I’m Nigerian & I love character designing , sapphic themes and using pink. 🌸Portfolio- <a href="https://umaymad.weebly.com">https://umaymad.weebly.com</a></div>
-            <div class="tweet-media">
-              <img src="https://loremflickr.com/370/270" alt="Tweet Media">
-            </div>
-          </figure>
-          <figure class="tweet">
-            <div class="tweet-header">
-              <div class="user-info">
-                <img class="avatar" src="https://loremflickr.com/200/200" alt="umaimah">
-                <div class="title-username">
-                  <div class="title">umaimah</div>
-                  <div class="username">@ColouredBraids</div>
-                </div>
-              </div>
-              <div class="tweet-actions">
-                <span class="pin "></span>
-                <span class="twitter"></span>
-              </div>
-            </div>
-            <div class="tweet-text">Hi <a>#visiblewomen</a> 💖 I’m Umayma. I’m Nigerian & I love character designing , sapphic themes and using pink. 🌸Portfolio- <a href="https://umaymad.weebly.com">https://umaymad.weebly.com</a></div>
-            <div class="tweet-media">
-              <img src="https://loremflickr.com/370/470" alt="Tweet Media">
-            </div>
-          </figure>
-          <figure class="tweet">
-            <div class="tweet-header">
-              <div class="user-info">
-                <img class="avatar" src="https://loremflickr.com/200/200" alt="umaimah">
-                <div class="title-username">
-                  <div class="title">umaimah</div>
-                  <div class="username">@ColouredBraids</div>
-                </div>
-              </div>
-              <div class="tweet-actions">
-                <span class="pin "></span>
-                <span class="twitter"></span>
-              </div>
-            </div>
-            <div class="tweet-text">Hi <a>#visiblewomen</a> 💖 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, porro. Odio quia magnam doloremque! Ab voluptas inventore eaque laborum iusto eos dolores rem magni iste, ullam quibusdam! Quo necessitatibus cupiditate eligendi fugiat id! A quas voluptatem autem, necessitatibus dolor, ipsam placeat at ducimus, sequi tempore explicabo consequatur laudantium eum delectus. Voluptatem voluptatibus quas earum veritatis doloribus vero tempora praesentium, vitae, inventore sed consectetur soluta sint unde aliquam provident totam adipisci eum minima? Cupiditate impedit ipsa pariatur aliquid. I’m Umayma. I’m Nigerian & I love character designing , sapphic themes and using pink. 🌸Portfolio- <a href="https://umaymad.weebly.com">https://umaymad.weebly.com</a></div>
-            <div class="tweet-media">
-              <img src="https://loremflickr.com/570/470" alt="Tweet Media">
-            </div>
-          </figure>
-          <figure class="tweet">
-            <div class="tweet-header">
-              <div class="user-info">
-                <img class="avatar" src="https://loremflickr.com/200/200" alt="umaimah">
-                <div class="title-username">
-                  <div class="title">umaimah</div>
-                  <div class="username">@ColouredBraids</div>
-                </div>
-              </div>
-              <div class="tweet-actions">
-                <span class="pin "></span>
-                <span class="twitter"></span>
-              </div>
-            </div>
-            <div class="tweet-text">Hi <a>#visiblewomen</a> 💖 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sit minus animi praesentium vitae reprehenderit molestias porro dolore aspernatur explicabo quam molestiae a ut id, quo maiores illo. Esse, reiciendis. I’m Umayma. I’m Nigerian & I love character designing , sapphic themes and using pink. 🌸Portfolio- <a href="https://umaymad.weebly.com">https://umaymad.weebly.com</a></div>
-            <div class="tweet-media">
-              <img src="https://loremflickr.com/570/370" alt="Tweet Media">
-            </div>
-          </figure>
-          <figure class="tweet">
-            <div class="tweet-header">
-              <div class="user-info">
-                <img class="avatar" src="https://loremflickr.com/200/200" alt="umaimah">
-                <div class="title-username">
-                  <div class="title">umaimah</div>
-                  <div class="username">@ColouredBraids</div>
-                </div>
-              </div>
-              <div class="tweet-actions">
-                <span class="pin "></span>
-                <span class="twitter"></span>
-              </div>
-            </div>
-            <div class="tweet-text">Hi <a>#visiblewomen</a> 💖 Lorem ipsum dolor sit amet. I’m Umayma. I’m Nigerian & I love character designing , sapphic themes and using pink. 🌸Portfolio- <a href="https://umaymad.weebly.com">https://umaymad.weebly.com</a></div>
-            <div class="tweet-media">
-              <img src="https://loremflickr.com/520/370" alt="Tweet Media">
-            </div>
-          </figure>
-          <figure class="tweet 📌">
-            <figcaption>
-              <h1>Hey, we have an idea!</h1>
-              <p>If you want to have a productive search, you can pin the attractive cards and check the pinned items after browsing.</p>
-            </figcaption>
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-              <path fill="#C0CCDA" d="M20.875 0c-.466 0-.896.25-1.128.654h-.002l-5.706 8.338 6.971 6.971 8.384-5.736.003-.002a1.304 1.304 0 00.216-2.027L21.828.415 21.822.41a1.304 1.304 0 00-.947-.41zM7.983 10.428a7.552 7.552 0 00-5.357 2.218l6.441 6.444-8.666 8.666a1.304 1.304 0 101.843 1.843l8.666-8.666 6.444 6.441a7.574 7.574 0 000-10.71l-4.017-4.018a7.546 7.546 0 00-5.354-2.218z" />
-            </svg>
-          </figure>
-          <figure class="tweet">
-            <div class="tweet-header">
-              <div class="user-info">
-                <img class="avatar" src="https://loremflickr.com/200/200" alt="umaimah">
-                <div class="title-username">
-                  <div class="title">umaimah</div>
-                  <div class="username">@ColouredBraids</div>
-                </div>
-              </div>
-              <div class="tweet-actions">
-                <span class="pin active"></span>
-                <span class="twitter"></span>
-              </div>
-            </div>
-            <div class="tweet-text">Hi <a>#visiblewomen</a> 💖 I’m Umayma. I’m Nigerian & I love character designing , sapphic themes and using pink. 🌸Portfolio- <a href="https://umaymad.weebly.com">https://umaymad.weebly.com</a></div>
-            <div class="tweet-media">
-              <img src="https://loremflickr.com/340/270" alt="">
-            </div>
-          </figure>
-          <figure class="tweet">
-            <div class="tweet-header">
-              <div class="user-info">
-                <img class="avatar" src="https://loremflickr.com/200/200" alt="umaimah">
-                <div class="title-username">
-                  <div class="title">umaimah</div>
-                  <div class="username">@ColouredBraids</div>
-                </div>
-              </div>
-              <div class="tweet-actions">
-                <span class="pin "></span>
-                <span class="twitter"></span>
-              </div>
-            </div>
-            <div class="tweet-text">Hi <a>#visiblewomen</a> 💖 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sit minus animi praesentium vitae reprehenderit molestias porro dolore aspernatur explicabo quam molestiae a ut id, quo maiores illo. Esse, reiciendis. I’m Umayma. I’m Nigerian & I love character designing , sapphic themes and using pink. 🌸Portfolio- <a href="https://umaymad.weebly.com">https://umaymad.weebly.com</a></div>
-            <div class="tweet-media">
-              <img src="https://loremflickr.com/370/270" alt="">
-            </div>
-          </figure>
-          <figure class="tweet">
-            <div class="tweet-header">
-              <div class="user-info">
-                <img class="avatar" src="https://loremflickr.com/200/200" alt="umaimah">
-                <div class="title-username">
-                  <div class="title">umaimah</div>
-                  <div class="username">@ColouredBraids</div>
-                </div>
-              </div>
-              <div class="tweet-actions">
-                <span class="pin "></span>
-                <span class="twitter"></span>
-              </div>
-            </div>
-            <div class="tweet-text">Hi <a>#visiblewomen</a> 💖 I’m Umayma. I’m Nigerian & I love character designing , sapphic themes and using pink. 🌸Portfolio- <a href="https://umaymad.weebly.com">https://umaymad.weebly.com</a></div>
-            <div class="tweet-media">
-              <img src="https://loremflickr.com/370/470" alt="">
-            </div>
-          </figure>
-          <figure class="tweet">
-            <div class="tweet-header">
-              <div class="user-info">
-                <img class="avatar" src="https://loremflickr.com/200/200" alt="umaimah">
-                <div class="title-username">
-                  <div class="title">umaimah</div>
-                  <div class="username">@ColouredBraids</div>
-                </div>
-              </div>
-              <div class="tweet-actions">
-                <span class="pin "></span>
-                <span class="twitter"></span>
-              </div>
-            </div>
-            <div class="tweet-text">Hi <a>#visiblewomen</a> 💖 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, porro. Odio quia magnam doloremque! Ab voluptas inventore eaque laborum iusto eos dolores rem magni iste, ullam quibusdam! Quo necessitatibus cupiditate eligendi fugiat id! A quas voluptatem autem, necessitatibus dolor, ipsam placeat at ducimus, sequi tempore explicabo consequatur laudantium eum delectus. Voluptatem voluptatibus quas earum veritatis doloribus vero tempora praesentium, vitae, inventore sed consectetur soluta sint unde aliquam provident totam adipisci eum minima? Cupiditate impedit ipsa pariatur aliquid. I’m Umayma. I’m Nigerian & I love character designing , sapphic themes and using pink. 🌸Portfolio- <a href="https://umaymad.weebly.com">https://umaymad.weebly.com</a></div>
-            <div class="tweet-media">
-              <img src="https://loremflickr.com/570/470" alt="">
-            </div>
-          </figure>
-          <figure class="tweet">
-            <div class="tweet-header">
-              <div class="user-info">
-                <img class="avatar" src="https://loremflickr.com/200/200" alt="umaimah">
-                <div class="title-username">
-                  <div class="title">umaimah</div>
-                  <div class="username">@ColouredBraids</div>
-                </div>
-              </div>
-              <div class="tweet-actions">
-                <span class="pin "></span>
-                <span class="twitter"></span>
-              </div>
-            </div>
-            <div class="tweet-text">Hi <a>#visiblewomen</a> 💖 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sit minus animi praesentium vitae reprehenderit molestias porro dolore aspernatur explicabo quam molestiae a ut id, quo maiores illo. Esse, reiciendis. I’m Umayma. I’m Nigerian & I love character designing , sapphic themes and using pink. 🌸Portfolio- <a href="https://umaymad.weebly.com">https://umaymad.weebly.com</a></div>
-            <div class="tweet-media">
-              <img src="https://loremflickr.com/570/370" alt="">
-            </div>
-          </figure>
-          <figure class="tweet">
-            <div class="tweet-header">
-              <div class="user-info">
-                <img class="avatar" src="https://loremflickr.com/200/200" alt="umaimah">
-                <div class="title-username">
-                  <div class="title">umaimah</div>
-                  <div class="username">@ColouredBraids</div>
-                </div>
-              </div>
-              <div class="tweet-actions">
-                <span class="pin "></span>
-                <span class="twitter"></span>
-              </div>
-            </div>
-            <div class="tweet-text">Hi <a>#visiblewomen</a> 💖 Lorem ipsum dolor sit amet. I’m Umayma. I’m Nigerian & I love character designing , sapphic themes and using pink. 🌸Portfolio- <a href="https://umaymad.weebly.com">https://umaymad.weebly.com</a></div>
-            <div class="tweet-media">
-              <img src="https://loremflickr.com/520/370" alt="">
-            </div>
-          </figure>
-        </section>
-        <h3 class="final-result">Hey! You have reached the end of results.</h3>
+        <!-- /Dialog Intro -->
       </div>
     </section>
     <!-- /Index -->
   </main>
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <nav>
-        <p class="copyright">© Copyright 2019 hashtagvisiblewomen.com. <br> All Right Reserved.</p>
-        <ul class="footer-links-list">
-          <li><a href="/" title="Home">Home</a></li>
-          <li><a href="about.html" title="About Us">About Us</a></li>
-          <li><a href="blog.html" title="Blog">Blog</a></li>
-          <li><a href="contact.html" title="Contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
-  <!-- /Footer -->
-  <!-- Social Icons -->
-  <section class="social-icons">
-    <a href="https://www.facebook.com/" title="facebook" class="facebook" target="_blank" rel="noopener noreferrer"></a>
-    <a href="https://www.twitter.com/" title="twitter" class="twitter" target="_blank" rel="noopener noreferrer"></a>
-  </section>
-  <!-- /Social Icons -->
-  <!-- Dialog Subscribe -->
-  <section class="subscribe" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc">
-    <a href="/" title="#VisibleWomen">
-      <img class="logo" src="./img/logo.svg" alt="#VisibleWomen - Logo">
-    </a>
-    <div class="text">
-      <h1 id="dialog-title">Want to get updated?</h1>
-      <h1 id="dialog-desc">Join our email list.</h1>
-    </div>
-    <form id="subscribe">
-      <div class="input-group">
-        <input class="input" name="email" type="email" placeholder="What’s your e-mail?">
-        <button class="input-submit-btn" type="submit"></button>
-      </div>
-    </form>
-    <button class="dialog-close-btn"></button>
-  </section>
-  <!-- /Dialog Subscribe -->
-  <!-- Dialog Be Visible -->
-  <section class="be-visible" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc">
-    <a href="/" title="#VisibleWomen">
-      <img class="logo" src="./img/logo.svg" alt="#VisibleWomen - Logo">
-    </a>
-    <div class="text">
-      <h1 id="dialog-title">Want to appear in results?</h1>
-      <h1 id="dialog-desc">Submit your tweet.</h1>
-    </div>
-    <form id="be-visible">
-      <div class="input-group">
-        <input class="input" name="role" type="text" placeholder="What’s your role?">
-      </div>
-      <div class="input-group">
-        <input class="input" name="tweet-url" type="text" placeholder="Paste URL for your tweet">
-        <button class="input-submit-btn" type="submit"></button>
-      </div>
-    </form>
-    <button class="dialog-close-btn"></button>
-  </section>
-  <!-- /Dialog Be Visible -->
-  <!-- Dialog Send Pin List -->
-  <section class="send-pin" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc">
-    <a href="/" title="#VisibleWomen">
-      <img class="logo" src="./img/logo.svg" alt="#VisibleWomen - Logo">
-    </a>
-    <div class="text">
-      <h1 id="dialog-title">You’re one step away from</h1>
-      <h1 id="dialog-desc">receiving the pin list!</h1>
-    </div>
-    <form id="subscribe">
-      <div class="input-group">
-        <input class="input" name="email" type="email" placeholder="What’s your e-mail?">
-        <button class="input-submit-btn" type="submit"></button>
-      </div>
-    </form>
-    <button class="dialog-close-btn"></button>
-  </section>
-  <!-- /Dialog Send Pin List -->
-  <div class="dialog-overlay"></div>
-  <!-- ScrollTop Button -->
-  <button class="scrolltop" type="button"></button>
-  <!-- /ScrollTop Button -->
-  <!-- Facebook Share Button -->
-  <div id="fb-root"></div>
-  <!-- /Facebook Share Button -->
   <!-- JavaScript Files -->
   <script type="text/javascript" src="js/vendors.min.js"></script>
   <script type="text/javascript" src="js/core.js"></script>

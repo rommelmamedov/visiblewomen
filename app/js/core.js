@@ -11,32 +11,6 @@
       'color: #A97BFF; font-weight: 800; font-size: 28px;'
     );
 
-    // $(document).scroll(function() {
-    //   checkOffset();
-    // });
-
-    // function checkOffset() {
-    //   // if ($('button.filled').offset().top + $('button.filled').height() >= $('.footer').offset().top - 20) {
-    //   //   $('button.filled').css('position', 'absolute');
-    //   // }
-
-    //   if ($(document).scrollTop() + window.innerHeight < $('.footer').offset().top) {
-    //     $('button.filled').css('position', 'fixed');
-    //   }
-    // }
-
-    function checkOffset() {
-      const a = $(document).scrollTop() + window.innerHeight;
-      const b = $('.footer').offset().top;
-      if (a > b) {
-        $('button.filled').addClass('fadeOut animated');
-      } else {
-        $('button.filled').removeClass('fadeOut animated');
-      }
-    }
-    $(document).ready(checkOffset);
-    $(document).scroll(checkOffset);
-
     const $grid = $('.twitter-cards').imagesLoaded(() => {
       $grid.masonry({
         itemSelector: '.tweet',
@@ -45,8 +19,19 @@
         horizontalOrder: true,
       });
     });
-    //  dialog-overlay
-    //  be-visible
+
+    const checkOffset = () => {
+      const a = $(document).scrollTop() + window.innerHeight;
+      const b = $('.footer').offset().top;
+      if (a > b) {
+        $('button.filled').addClass('fadeOut animated');
+      } else {
+        $('button.filled').removeClass('fadeOut animated');
+      }
+    };
+
+    $(document).ready(checkOffset);
+    $(document).scroll(checkOffset);
 
     const openModal = (clickItem, modalClass) => {
       $(`${clickItem}`).on('click', function() {
@@ -78,27 +63,35 @@
       $('body').css('overflow', 'unset');
     });
 
-    $('.input-submit-btn').on('click', function(e) {
+    $('.intro .input-submit-btn').on('click', function(e) {
+      e.preventDefault();
+      $(this).addClass('submitted');
+      setTimeout(() => {
+        const currentPath = window.location.href;
+        const redirectTo = `${currentPath}/home.html`;
+        $(location).attr('href', redirectTo);
+      }, 1000);
+    });
+
+    $('.be-visible .input-submit-btn').on('click', function(e) {
       e.preventDefault();
       $(this).addClass('submitted');
       $('.be-visible #dialog-title').text('Wohooo!');
       $('.be-visible #dialog-desc').text('Your tweet is submitted.');
     });
 
-    $('.input-submit-btn').on('click', function(e) {
+    $('.subscribe .input-submit-btn').on('click', function(e) {
       e.preventDefault();
       $(this).addClass('submitted');
       $('.subscribe #dialog-title').text('It’s done!');
       $('.subscribe #dialog-desc').text('You’re one of us now.');
     });
 
-    $('.input-submit-btn').on('click', function(e) {
+    $('.send-pin .input-submit-btn').on('click', function(e) {
       e.preventDefault();
       $(this).addClass('submitted');
       $('.send-pin #dialog-title').text('We’ve sent your e-mail the');
       $('.send-pin #dialog-desc').text('pinned items list.');
     });
-
-    //  be-visible
   });
 })();
