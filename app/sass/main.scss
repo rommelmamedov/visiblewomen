@@ -16,8 +16,45 @@ body {
     position: relative;
   }
 }
+
+@-webkit-keyframes fadeOut {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    visibility: visible;
+
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+.animated {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
 @import 'partials/partials';
 @import 'pages/pages';
 @import 'components/components';
 @import 'lib/libs';
-

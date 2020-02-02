@@ -51,9 +51,10 @@
           border-radius: $border-r-20;
           background-color: $blue;
           @media (max-width: $breakpoint-lg) {
-            right: 30px;
-            bottom: 30px;
-            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            position: fixed;
+            z-index: $z-4;
           }
         }
       }

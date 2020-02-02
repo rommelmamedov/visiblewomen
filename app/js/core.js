@@ -11,6 +11,32 @@
       'color: #A97BFF; font-weight: 800; font-size: 28px;'
     );
 
+    // $(document).scroll(function() {
+    //   checkOffset();
+    // });
+
+    // function checkOffset() {
+    //   // if ($('button.filled').offset().top + $('button.filled').height() >= $('.footer').offset().top - 20) {
+    //   //   $('button.filled').css('position', 'absolute');
+    //   // }
+
+    //   if ($(document).scrollTop() + window.innerHeight < $('.footer').offset().top) {
+    //     $('button.filled').css('position', 'fixed');
+    //   }
+    // }
+
+    function checkOffset() {
+      const a = $(document).scrollTop() + window.innerHeight;
+      const b = $('.footer').offset().top;
+      if (a > b) {
+        $('button.filled').addClass('fadeOut animated');
+      } else {
+        $('button.filled').removeClass('fadeOut animated');
+      }
+    }
+    $(document).ready(checkOffset);
+    $(document).scroll(checkOffset);
+
     const $grid = $('.twitter-cards').imagesLoaded(() => {
       $grid.masonry({
         itemSelector: '.tweet',

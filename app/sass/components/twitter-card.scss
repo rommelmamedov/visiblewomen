@@ -5,6 +5,15 @@
   box-shadow: 0 14px 23px 4px rgba(0, 0, 0, 0.03);
   background-color: $white;
   margin-bottom: 40px;
+  @media (max-width: $breakpoint-md) {
+    left: 50% !important;
+    transform: translate(-50%);
+  }
+  @media (max-width: $breakpoint-sm) {
+    left: 0 !important;
+    transform: unset;
+    width: 100%;
+  }
   .tweet-header {
     display: flex;
     align-items: flex-start;
@@ -91,6 +100,9 @@
   background-repeat: no-repeat;
   background-position: 85% 101%;
   background-image: url('../img/icons/idea.svg');
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
   figcaption {
     h1 {
       font-family: $font-bold;
