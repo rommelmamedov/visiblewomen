@@ -2,6 +2,12 @@
 
 .footer {
   margin-top: 40px;
+  br {
+    display: none;
+    @media (max-width: $breakpoint-md) {
+      display: block;
+    }
+  }
   nav {
     display: flex;
     justify-content: space-between;
@@ -15,8 +21,10 @@
     }
     .copyright {
       color: $grey;
-      @media (max-width: $breakpoint-md) {
+      @media (max-width: $breakpoint-lg) {
         margin-top: 20px;
+      }
+      @media (max-width: $breakpoint-md) {
         text-align: center;
         padding: 0 60px;
       }
