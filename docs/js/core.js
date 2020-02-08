@@ -4,7 +4,13 @@
   $(document).ready(function () {
     //  Welcome Console
     //  prettier-ignore
-    console.log('%c#%cVisible%cWomen', 'color: #A97BFF; font-weight: 800; font-size: 28px;', 'color: #A97BFF; font-weight: 300; font-size: 28px;', 'color: #A97BFF; font-weight: 800; font-size: 28px;');
+    console.log('%c#%cVisible%cWomen', 'color: #A97BFF; font-weight: 800; font-size: 28px;', 'color: #A97BFF; font-weight: 300; font-size: 28px;', 'color: #A97BFF; font-weight: 800; font-size: 28px;'); // const setViewportProperty = () => {
+    //   const vh = window.innerHeight * 0.01;
+    //   document.documentElement.style.setProperty('--vh', vh + 'px');
+    // };
+    // window.addEventListener('resize', setViewportProperty);
+    // setViewportProperty();
+
     var $grid = $('.twitter-cards').imagesLoaded(function () {
       $grid.masonry({
         itemSelector: '.tweet',

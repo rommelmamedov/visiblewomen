@@ -2,14 +2,21 @@
 
 .about {
   margin-top: 70px;
+  @media (max-width: $breakpoint-lg) {
+    margin-top: 30px;
+  }
   h1 {
     margin: 5px 0 20px;
     color: $black-2;
     font-family: $font-semibold;
-    font-size:   $ftz-biggest;
+    font-size: $ftz-biggest;
     line-height: 1.2;
     text-align: center;
     text-transform: capitalize;
+    @media (max-width: $breakpoint-lg) {
+      margin: 5px 0 10px;
+      font-size: $ftz-maxi;
+    }
   }
   .about-content {
     margin-bottom: 150px;
@@ -19,6 +26,11 @@
     font-family: $font-regular;
     font-size: $ftz-large;
     text-align: justify;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 50px;
+      padding: 0;
+      text-align: left;
+    }
     p {
       margin-bottom: 1em;
     }

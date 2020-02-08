@@ -2,18 +2,33 @@
 
 .pinned-items {
   margin-top: 70px;
+  @media (max-width: $breakpoint-lg) {
+    margin-top: 35px;
+  }
   .position-type {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 45px 0 35px;
+    @media (max-width: $breakpoint-lg) {
+      margin: 0 0 30px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
     h1 {
       color: $grey;
       font-family: $font-semibold;
       font-size: $ftz-biggest;
+      @media (max-width: $breakpoint-lg) {
+        margin-bottom: 15px;
+        font-size: $ftz-maxi;
+      }
       span {
         color: $blue;
         font-family: $font-bold;
+        @media (max-width: $breakpoint-lg) {
+          display: block;
+        }
       }
     }
     a {
@@ -23,6 +38,9 @@
       font-family: $font-medium;
       font-size: $ftz-large;
       text-decoration: underline;
+      @media (max-width: $breakpoint-lg) {
+        font-size: $ftz-small;
+      }
       &::before {
         content: '';
         display: inline-block;

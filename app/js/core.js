@@ -11,6 +11,14 @@
       'color: #A97BFF; font-weight: 800; font-size: 28px;'
     );
 
+    // const setViewportProperty = () => {
+    //   const vh = window.innerHeight * 0.01;
+    //   document.documentElement.style.setProperty('--vh', vh + 'px');
+    // };
+
+    // window.addEventListener('resize', setViewportProperty);
+    // setViewportProperty();
+
     const $grid = $('.twitter-cards').imagesLoaded(() => {
       $grid.masonry({
         itemSelector: '.tweet',
